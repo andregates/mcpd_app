@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.tads.eaj.ufrn.mcpd.RegistroActivity"
+    tools:showIn="@layout/activity_registro">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        style="@style/Theme.AppCompat.DayNight.NoActionBar"
+        tools:context="com.tads.eaj.ufrn.mcpd.RegistroActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+
+            <Button
+                android:id="@+id/btn_apontamentos"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="@color/verde"
+                android:text="Apontamento de pragas"
+                android:textSize="10dp" />
+
+            <Button
+                android:id="@+id/btn_consultar"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:backgroundTint="@color/verde"
+                android:text="Consulta Lançamentos"
+                android:textSize="10dp" />
+
+            <Button
+                android:id="@+id/btn_sair"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="@color/verde"
+                android:text="Sair"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/spinner_cultura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin" />
+
+        <Spinner
+            android:id="@+id/spinner_praga_dano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/campo_imagen"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+            <include layout="@layout/frame_imagem"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Observações"/>
+            <EditText
+                android:id="@+id/observacoes"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:lines="8"
+                android:minLines="1"
+                android:maxLines="4"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:background="@drawable/border_edittext"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escala de Incidência"
+                    android:layout_gravity="center_vertical"/>
+                <RadioGroup
+                    android:id="@+id/radioGroup_escala"
+                    android:layout_width="203dp"
+                    android:layout_height="36dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/sev_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1" />
+
+                    <RadioButton
+                        android:id="@+id/sev_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"/>
+
+                    <RadioButton
+                        android:id="@+id/sev_03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"/>
+
+                    <RadioButton
+                        android:id="@+id/sev_04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"/>
+
+                    <RadioButton
+                        android:id="@+id/sev_05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:text="5" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Tratamento" />
+                <RadioGroup
+                    android:id="@+id/radioGroup_tratamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+                    <RadioButton
+                        android:id="@+id/registro_sim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sim" />
+                    <RadioButton
+                        android:id="@+id/registro_nao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Não" />
+                </RadioGroup>
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/tratamento"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:lines="8"
+                android:minLines="1"
+                android:maxLines="3"
+                android:background="@drawable/border_edittext"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mensagem de alerta!"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/btn_excluir"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="@color/verde"
+                android:text="Excluir"/>
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="@color/verde"
+                android:text="cancelar"/>
+
+            <Button
+                android:id="@+id/btn_gravar"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="@color/verde"
+                android:text="gravar"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

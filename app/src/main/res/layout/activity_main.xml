@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cfcfcf"
+    tools:context="com.tads.eaj.ufrn.mcpd.MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/bt01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/bt01_text"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="#808080"
+                android:gravity="center_vertical"
+                android:text="splash"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+        </com.andexert.library.RippleView>
+        <com.andexert.library.RippleView
+            android:id="@+id/bt02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/bt01">
+
+            <TextView
+                android:id="@+id/bt02_text"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="#808080"
+                android:gravity="center_vertical"
+                android:text="login"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+        </com.andexert.library.RippleView>
+        <com.andexert.library.RippleView
+            android:id="@+id/bt04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/bt04_text"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="#808080"
+                android:gravity="center_vertical"
+                android:text="Coleta"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btn_teste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="64dp"
+                android:text="teste" />
+        </com.andexert.library.RippleView>
+        <com.andexert.library.RippleView
+            android:id="@+id/bt05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/bt05_text"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="#808080"
+                android:gravity="center_vertical"
+                android:text="geo-referenciamento"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+        </com.andexert.library.RippleView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="O objetivo dessa tela é possibilitar a visualização das telas na qual estamos trabalhando."/>
+    </LinearLayout>
+</RelativeLayout>

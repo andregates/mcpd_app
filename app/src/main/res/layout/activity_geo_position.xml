@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/planttt"
+    tools:context="com.tads.eaj.ufrn.mcpd.GeoPositionActivity"
+   >
+
+
+
+        <TextView
+            android:id="@+id/debug"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:layout_marginBottom="20dp"
+        />
+
+
+
+    <com.andexert.library.RippleView
+        android:id="@+id/btn_atualiza"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/btn_atualiza_text"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#808080"
+            android:gravity="center_vertical"
+            android:text="Atualiza posição"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+    </com.andexert.library.RippleView>
+
+
+
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sua localizaçao atual:"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+       />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude:"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tx_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude:"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/tx_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp"
+            android:textColor="@color/white"
+             />
+
+    </LinearLayout>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/btn_maps"
+        android:layout_marginTop="40dp"
+       android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      >
+        <TextView
+            android:id="@+id/btn_maps_text"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="#808080"
+            android:gravity="center_vertical"
+            android:text="Google Maps"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+       />
+
+    </com.andexert.library.RippleView>
+
+
+</android.widget.LinearLayout>
