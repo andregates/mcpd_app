@@ -89,19 +89,19 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-                for (Usuario usuario: listaUsuarios) {
-                    Log.i("usuarios",usuario.getNomeUsuario());
-                    if(login.equals(usuario.getNomeUsuario()) && password.equals(usuario.getCpf())){
+               // for (Usuario usuario: listaUsuarios) {
+                //    Log.i("usuarios",usuario.getNomeUsuario());
+                  //  if(login.equals(usuario.getNomeUsuario()) && password.equals(usuario.getCpf())){
                         Intent intent = new Intent(LoginActivity.this,RegistroActivity.class );;
                         Bundle bundle = new Bundle();
                         intent.putExtras(bundle);
                         startActivity(intent);
                         finish();
-                    }
-                }
+                 //   }
+               // }
 
 
-                Snackbar.make((View)v.getParent(), "Usuário ou Senha inválidos", Snackbar.LENGTH_SHORT).show();
+                //Snackbar.make((View)v.getParent(), "Usuário ou Senha inválidos", Snackbar.LENGTH_SHORT).show();
 
 
 
