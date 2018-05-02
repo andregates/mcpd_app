@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/planttt"
-    tools:context="com.tads.eaj.ufrn.mcpd.GeoPositionActivity"
+    tools:context="com.example.tads.mcpd_android.activity.GeoPositionActivity"
    >
 
 

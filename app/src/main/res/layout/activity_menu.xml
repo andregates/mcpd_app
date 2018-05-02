@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tads.mcpd_android.fragments.menu">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_apontamentos"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:backgroundTint="@color/verde"
+            android:text="Apontamento de pragas"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/btn_consultar"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:backgroundTint="@color/verde"
+            android:text="Consulta Lançamentos"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/btn_sair"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:backgroundTint="@color/verde"
+            android:text="Sair"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

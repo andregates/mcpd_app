@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tads.eaj.ufrn.mcpd.LoginActivity">
+    android:background="@drawable/background_splash"
+    tools:context="com.example.tads.mcpd_android.activity.LoginActivity">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/plantt"
+        android:src="@drawable/plant"
         android:scaleType="center"
-        android:background="#000"
+        android:background="@drawable/background_splash"
         android:alpha="0.9"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="center"
-        android:background="#000"
+        android:background="#fff"
         android:alpha="0.4"/>
+
     <FrameLayout
 
         android:layout_width="250dp"
