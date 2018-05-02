@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.tads.eaj.ufrn.mcpd.ConsultaRegistrosActivity">
+    tools:context="com.example.tads.mcpd_android.activity.ConsultaRegistrosActivity">
 
 
     <LinearLayout
@@ -14,29 +14,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn_apontamentos"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:backgroundTint="@color/verde"
-            android:text="Apontamento de pragas"
-            android:textSize="10dp" />
+        <include layout="@layout/activity_menu"/>
 
-        <Button
-            android:id="@+id/btn_consultar"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:backgroundTint="@color/verde"
-            android:text="Consulta Lançamentos"
-            android:textSize="10dp" />
-
-        <Button
-            android:id="@+id/btn_sair"
-            android:layout_width="wrap_content"
-            android:layout_height="36dp"
-            android:backgroundTint="@color/verde"
-            android:text="Sair"
-            android:textSize="10dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -99,7 +78,8 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_consulta_registros"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp">
 
                 </android.support.v7.widget.RecyclerView>
             </LinearLayout>
