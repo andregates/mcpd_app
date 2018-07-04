@@ -93,12 +93,6 @@ public class ConsultaRegistrosActivity extends AppCompatActivity{
         });
         registroReference.addChildEventListener(childEventRegistro);
 
-
-
-
-
-
-
         RecyclerView.LayoutManager layout = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,true);
         recyclerView.setLayoutManager(layout);
 
@@ -152,7 +146,7 @@ public class ConsultaRegistrosActivity extends AppCompatActivity{
         btn_Apontamentos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConsultaRegistrosActivity.this,RegistroActivity.class);
+                Intent intent = new Intent(ConsultaRegistrosActivity.this,RegistroActivityOld.class);
                 setResult(RESULT_CANCELED,intent);
                 finish();
             }

@@ -3,6 +3,7 @@ package com.example.tads.mcpd_android.adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,8 @@ public class CulturaAdapter extends BaseAdapter {
         Cultura cultura = (Cultura) getItem(position);
 
         holder.culturaTextView.setText(cultura.getNome());
-        holder.culturaTextView.setTextSize(25);
+        holder.culturaTextView.setTextSize(16);
+        holder.culturaTextView.setPadding(8,8,8,8);
         return convertView;
     }
 

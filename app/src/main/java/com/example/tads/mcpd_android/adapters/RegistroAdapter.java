@@ -1,24 +1,27 @@
 package com.example.tads.mcpd_android.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
+import com.example.tads.mcpd_android.DAO.RegistroDAOImpl;
 import com.example.tads.mcpd_android.R;
 import com.example.tads.mcpd_android.model.Cultura;
 import com.example.tads.mcpd_android.model.Praga;
 import com.example.tads.mcpd_android.model.Registro;
+import com.example.tads.mcpd_android.utils.MCPDUtils;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.example.tads.mcpd_android.activity.RegistroActivity.listaCulturas;
-import static com.example.tads.mcpd_android.activity.RegistroActivity.listaPragas;
 
 
 /**
@@ -28,12 +31,18 @@ import static com.example.tads.mcpd_android.activity.RegistroActivity.listaPraga
 
 public class RegistroAdapter extends RecyclerView.Adapter {
 
+    RegistroDAOImpl registroDAO;
     Context context;
     List<Registro> listaRegistros;
+    List<Cultura> culturas;
+    List<Praga> pragas;
 
-    public RegistroAdapter(Context c, List<Registro> listaRegistros){
+    public RegistroAdapter(Context c, List<Registro> listaRegistros) {
+        this.registroDAO = new RegistroDAOImpl();
         this.context = c;
         this.listaRegistros = listaRegistros;
+        this.culturas = registroDAO.findCulturas();
+        this.pragas = registroDAO.findPragas();
     }
 
 
@@ -48,45 +57,38 @@ public class RegistroAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-        List<Cultura> culturas = new ArrayList<>();
-        List<Praga> pragas = new ArrayList<>();
+        RegistroDAOImpl registroDAO = new RegistroDAOImpl();
+
 
         RegistroViewHolder registroholder = (RegistroViewHolder) holder;
         Registro registroEscolhido = listaRegistros.get(position);
 
         //objetos apenas para testes esses valores vao ser pegados diretamente pelo objeto registro quando tudo estiver no banco
+        Cultura c1 = culturas.get(registroEscolhido.getCulturaId());
+        Praga p1 = pragas.get(registroEscolhido.getPragaId());
 
-        //Cultura c1 = culturas.get(registroEscolhido.getCulturaId());
-        //Praga p1 = pragas.get(registroEscolhido.getPragaId());
+        registroholder.text_esc.setText("" + registroEscolhido.getEscala());
+        registroholder.text_dataHora.setText("" + registroEscolhido.getDataRegistro());
+        registroholder.text_cultura.setText("" + c1.getNome());
+        registroholder.text_praga.setText("" + p1.getNome());
 
+        Bitmap imageBitmap = MCPDUtils.decodeFromFirebaseBase64(registroEscolhido.getImageURL());
+        registroholder.imageView.setImageBitmap(imageBitmap);
 
-        registroholder.text_esc.setText(""+registroEscolhido.getEscala());
-        registroholder.text_dataHora.setText(""+registroEscolhido.getDataRegistro());
-        //registroholder.text_cultura.setText(""+c1.getNome());
-        //registroholder.text_praga.setText(""+p1.getNome());
         String tratamento;
-        if(registroEscolhido.isTratamento()){
+        if (registroEscolhido.isTratamento()) {
             tratamento = "Sim";
-        }else{
+        } else {
             tratamento = "Não";
         }
-       // registroholder.text_infestacaoTratamento.setText(""+tratamento+"-"+registroEscolhido.getTipo());
-
-
-            registroholder.row.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                //TODO: A IMPLEMENTAR QUANDO FOR PRECISO
-                }
-            });
-
+        // registroholder.text_infestacaoTratamento.setText(""+tratamento+"-"+registroEscolhido.getTipo());
 
     }
 
 
     @Override
     public int getItemCount() {
-        return  listaRegistros == null ? 0 :  listaRegistros.size();
+        return listaRegistros == null ? 0 : listaRegistros.size();
     }
 
     public class RegistroViewHolder extends RecyclerView.ViewHolder {
@@ -95,11 +97,11 @@ public class RegistroAdapter extends RecyclerView.Adapter {
         final TextView text_dataHora;
         final TextView text_cultura;
         final TextView text_praga;
-       // final TextView text_infestacaoTratamento;
-        final LinearLayout row;
+        final ImageView imageView;
+        // final TextView text_infestacaoTratamento;
 
 
-      //  final TextView label_infestacaoTratamento;
+        //  final TextView label_infestacaoTratamento;
 
         public RegistroViewHolder(View v) {
             super(v);
@@ -107,11 +109,8 @@ public class RegistroAdapter extends RecyclerView.Adapter {
             text_dataHora = v.findViewById(R.id.reg_hr);
             text_cultura = v.findViewById(R.id.reg_cult);
             text_praga = v.findViewById(R.id.reg_praga);
-           // text_infestacaoTratamento = v.findViewById(R.id.reg_inf_trat);
-
-
-            row = v.findViewById(R.id.reg_row);
-
+            imageView = v.findViewById(R.id.img_reg);
+            // text_infestacaoTratamento = v.findViewById(R.id.reg_inf_trat);
 
 
         }

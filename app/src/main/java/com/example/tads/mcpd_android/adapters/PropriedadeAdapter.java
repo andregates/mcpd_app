@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 
 import com.example.tads.mcpd_android.R;
-import com.example.tads.mcpd_android.activity.RegistroActivity;
+import com.example.tads.mcpd_android.activity.RegistroActivityOld;
 import com.example.tads.mcpd_android.model.Propriedade;
 
 import java.util.List;
@@ -57,7 +57,7 @@ public class PropriedadeAdapter extends RecyclerView.Adapter{
                     last_item_clicked.getmRow().setBackgroundColor(Color.parseColor("#ffffff"));
                 holder.getmRow().setBackground(v.getResources().getDrawable(R.drawable.shape_button));
                 last_item_clicked=holder;
-                intent = new Intent(context,RegistroActivity.class);
+                intent = new Intent(context,RegistroActivityOld.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 Bundle bundle = new Bundle();
                 bundle.putLong("idPropriedade", propriedade.getId());

@@ -5,152 +5,177 @@ import java.util.Date;
 
 public class Registro {
 
-	private long id;
-	private String key;
+    private long id;
+    private String key;
 
-	public String getKey() {
-		return key;
-	}
+    public String getKey() {
+        return key;
+    }
 
-	public void setKey(String key) {
-		this.key = key;
-	}
+    public void setKey(String key) {
+        this.key = key;
+    }
 
-	private String dataRegistro;
+    private String dataRegistro;
 
-	private double latitude;
+    private double latitude;
 
-	private double longitude;
+    private double longitude;
 
-	private int escala;
+    private int escala;
 
-	private boolean tratamento;
+    private boolean tratamento;
 
-	private String dataTratamento;
+    private String dataTratamento;
 
-	private String tipo;
+    private String tipo;
 
-	private String obs;
+    private String obs;
 
-	private int usuarioId;
+    private int usuarioId;
 
-	private int culturaId;
+    private int culturaId;
 
-	private int pragaId;
+    private int pragaId;
 
-	public Registro(){}
+    private String imageURL;
 
-	public Registro(String dataRegistro, double latitude, double longitude, int escala,
-					boolean tratamento, String dataTratamento, String tipo, String obs,
-					int usuarioId, int culturaId, int pragaId) {
-		this.dataRegistro = dataRegistro;
-		this.latitude = latitude;
-		this.longitude = longitude;
-		this.escala = escala;
-		this.tratamento = tratamento;
-		this.dataTratamento = dataTratamento;
-		this.tipo = tipo;
-		this.obs = obs;
-		this.usuarioId = usuarioId;
-		this.culturaId = culturaId;
-		this.pragaId = pragaId;
-		this.id=0;
-	}
+    public Registro() {
+    }
 
-	public String getDataRegistro() {
-		return dataRegistro;
-	}
+    public Registro(String dataRegistro, double latitude, double longitude, int escala,
+                    boolean tratamento, String dataTratamento, String tipo, String obs,
+                    int usuarioId, int culturaId, int pragaId) {
+        this.dataRegistro = dataRegistro;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.escala = escala;
+        this.tratamento = tratamento;
+        this.dataTratamento = dataTratamento;
+        this.tipo = tipo;
+        this.obs = obs;
+        this.usuarioId = usuarioId;
+        this.culturaId = culturaId;
+        this.pragaId = pragaId;
+        this.id = 0;
+    }
 
-	public void setDataRegistro(String dataRegistro) {
-		this.dataRegistro = dataRegistro;
-	}
+    public String getDataRegistro() {
+        return dataRegistro;
+    }
 
-	public double getLatitude() {
-		return latitude;
-	}
+    public void setDataRegistro(String dataRegistro) {
+        this.dataRegistro = dataRegistro;
+    }
 
-	public void setLatitude(double latitude) {
-		this.latitude = latitude;
-	}
+    public double getLatitude() {
+        return latitude;
+    }
 
-	public double getLongitude() {
-		return longitude;
-	}
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
 
-	public void setLongitude(double longitude) {
-		this.longitude = longitude;
-	}
+    public double getLongitude() {
+        return longitude;
+    }
 
-	public int getEscala() {
-		return escala;
-	}
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
 
-	public void setEscala(int escala) {
-		this.escala = escala;
-	}
+    public int getEscala() {
+        return escala;
+    }
 
-	public boolean isTratamento() {
-		return tratamento;
-	}
+    public void setEscala(int escala) {
+        this.escala = escala;
+    }
 
-	public void setTratamento(boolean tratamento) {
-		this.tratamento = tratamento;
-	}
+    public boolean isTratamento() {
+        return tratamento;
+    }
 
-	public String getDataTratamento() {
-		return dataTratamento;
-	}
+    public void setTratamento(boolean tratamento) {
+        this.tratamento = tratamento;
+    }
 
-	public void setDataTratamento(String dataTratamento) {
-		this.dataTratamento = dataTratamento;
-	}
+    public String getDataTratamento() {
+        return dataTratamento;
+    }
 
-	public String getTipo() {
-		return tipo;
-	}
+    public void setDataTratamento(String dataTratamento) {
+        this.dataTratamento = dataTratamento;
+    }
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
+    public String getTipo() {
+        return tipo;
+    }
 
-	public String getObs() {
-		return obs;
-	}
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
-	public void setObs(String obs) {
-		this.obs = obs;
-	}
+    public String getObs() {
+        return obs;
+    }
 
-	public int getUsuarioId() {	return usuarioId; }
+    public void setObs(String obs) {
+        this.obs = obs;
+    }
 
-	public void setUsuarioId(int usuarioId) { this.usuarioId = usuarioId; }
+    public int getUsuarioId() {
+        return usuarioId;
+    }
 
-	public int getCulturaId() { return culturaId; }
+    public void setUsuarioId(int usuarioId) {
+        this.usuarioId = usuarioId;
+    }
 
-	public void setCulturaId(int culturaId) { this.culturaId = culturaId; }
+    public int getCulturaId() {
+        return culturaId;
+    }
 
-	public int getPragaId() { return pragaId; }
+    public void setCulturaId(int culturaId) {
+        this.culturaId = culturaId;
+    }
 
-	public void setPragaId(int pragaId) { this.pragaId = pragaId; }
+    public int getPragaId() {
+        return pragaId;
+    }
+
+    public void setPragaId(int pragaId) {
+        this.pragaId = pragaId;
+    }
 
 
-	public Long getId() { return id; }
+    public Long getId() {
+        return id;
+    }
 
-	@Override
-	public String toString() {
-		return "Registro{" +
-				"id=" + id +
-				", dataRegistro='" + dataRegistro + '\'' +
-				", latitude=" + latitude +
-				", longitude=" + longitude +
-				", escala=" + escala +
-				", tratamento=" + tratamento +
-				", dataTratamento='" + dataTratamento + '\'' +
-				", tipo='" + tipo + '\'' +
-				", obs='" + obs + '\'' +
-				", usuarioId=" + usuarioId +
-				", culturaId=" + culturaId +
-				", pragaId=" + pragaId +
-				'}';
-	}
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    @Override
+    public String toString() {
+        return "Registro{" +
+                "id=" + id +
+                ", dataRegistro='" + dataRegistro + '\'' +
+                ", latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", escala=" + escala +
+                ", tratamento=" + tratamento +
+                ", dataTratamento='" + dataTratamento + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", obs='" + obs + '\'' +
+                ", usuarioId=" + usuarioId +
+                ", culturaId=" + culturaId +
+                ", pragaId=" + pragaId +
+                '}';
+    }
 }
